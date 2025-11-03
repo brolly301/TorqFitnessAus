@@ -9,9 +9,33 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+        name="routines"
+        options={{
+          title: "Routines",
+        }}
+      />
+      <Tabs.Screen
+        name="history"
+        options={{
+          title: "History",
+        }}
+      />
+      <Tabs.Screen
         name="workout"
         options={{
           title: "Workout",
+        }}
+      />
+      <Tabs.Screen
+        name="exercises"
+        options={{
+          title: "Exercises",
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
         }}
       />
     </Tabs>
