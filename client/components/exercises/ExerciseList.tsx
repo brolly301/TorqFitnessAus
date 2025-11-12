@@ -3,6 +3,7 @@ import React from "react";
 import ExerciseItem from "./ExerciseItem";
 
 export type Exercise = {
+  id: number;
   name: string;
   description: string;
   mainMuscle: string;
@@ -11,54 +12,15 @@ export type Exercise = {
   equipment: string;
 };
 
-export default function ExerciseList() {
-  const test = [
-    {
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-  ];
+export type Props = {
+  exercises: Exercise[];
+};
 
+export default function ExerciseList({ exercises }: Props) {
   return (
     <View>
-      {test.map((item) => {
-        return <ExerciseItem item={item} />;
+      {exercises.map((item) => {
+        return <ExerciseItem item={item} key={item.id} />;
       })}
     </View>
   );

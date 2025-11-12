@@ -1,11 +1,17 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
 
-export default function SearchBar() {
+type Props = {
+  search: string;
+  setSearch: (text: string) => void;
+};
+
+export default function SearchBar({ search, setSearch }: Props) {
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
+        onChangeText={(text) => setSearch(text)}
         placeholder="Enter an exercise .."
         placeholderTextColor={"black"}
       />
