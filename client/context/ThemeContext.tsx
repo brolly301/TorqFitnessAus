@@ -1,11 +1,11 @@
 import { darkTheme, lightTheme, Theme } from "@/constants/theme";
 import { createContext, ReactNode, useContext, useState } from "react";
 
-export type ThemeType = "Light" | "Dark";
+export type ThemeType = "light" | "dark";
 
 const themes: Record<ThemeType, Theme> = {
-  Light: lightTheme,
-  Dark: darkTheme,
+  light: lightTheme,
+  dark: darkTheme,
 };
 
 type ThemeContextType = {
@@ -17,7 +17,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [themeType, setThemeType] = useState<ThemeType>("Light");
+  const [themeType, setThemeType] = useState<ThemeType>("light");
 
   const theme = themes[themeType];
 
