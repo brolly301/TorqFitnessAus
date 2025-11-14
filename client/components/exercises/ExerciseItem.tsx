@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Exercise } from "./ExerciseList";
+import { Exercise } from "@/types/navigation";
 
 type Props = {
   item: Exercise;

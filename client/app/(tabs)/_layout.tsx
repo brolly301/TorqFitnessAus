@@ -1,3 +1,4 @@
+import AntDesign from "@expo/vector-icons/AntDesign";
 import { Tabs } from "expo-router";
 import React from "react";
 
@@ -11,31 +12,40 @@ export default function TabLayout() {
       <Tabs.Screen
         name="routines"
         options={{
-          title: "Routines",
+          title: "",
+          tabBarIcon: () => (
+            <AntDesign name="schedule" color={"black"} size={20} />
+          ),
         }}
       />
       <Tabs.Screen
         name="history"
         options={{
-          title: "History",
+          title: "",
+          tabBarIcon: () => (
+            <AntDesign name="history" color={"black"} size={20} />
+          ),
         }}
       />
       <Tabs.Screen
         name="workout"
         options={{
-          title: "Workout",
+          title: "",
+          tabBarIcon: () => <AntDesign name="plus" color={"black"} size={20} />,
         }}
       />
       <Tabs.Screen
         name="exercises"
         options={{
-          title: "Exercises",
+          title: "",
+          tabBarIcon: () => <AntDesign name="aim" color={"black"} size={20} />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          title: "Profile",
+          title: "",
+          tabBarIcon: () => <AntDesign name="user" color={"black"} size={20} />,
         }}
       />
     </Tabs>

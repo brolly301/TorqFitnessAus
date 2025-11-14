@@ -3,57 +3,11 @@ import React, { useState } from "react";
 import SearchBar from "@/components/layout/SearchBar";
 import ExerciseList from "@/components/exercises/ExerciseList";
 import { searchQuery } from "@/utils/strings";
+import { useExerciseContext } from "@/context/ExerciseContext";
 
 export default function ExercisesScreen() {
   const [search, setSearch] = useState<string>("");
-
-  const exercises = [
-    {
-      id: 1,
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      id: 2,
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      id: 3,
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      id: 4,
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-    {
-      id: 5,
-      name: "Incline Chest Press",
-      description: "An incline chest press using a seated bench & dumbbells.",
-      mainMuscle: "Chest",
-      secondaryMuscle: "Triceps",
-      category: "Weights",
-      equipment: "Dumbbells",
-    },
-  ];
+  const { exercises } = useExerciseContext();
 
   return (
     <View>
