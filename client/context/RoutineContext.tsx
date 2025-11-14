@@ -10,7 +10,25 @@ type RoutineContextType = {
 const RoutineContext = createContext<RoutineContextType | null>(null);
 
 export const RoutineProvider = ({ children }: { children: ReactNode }) => {
-  const [routines, setRoutines] = useState<Routine[]>([]);
+  const [routines, setRoutines] = useState<Routine[]>([
+    {
+      id: "1",
+      name: "First routine",
+      date: "today",
+      exercises: [
+        {
+          id: "1",
+          name: "Incline Chest Press",
+          description:
+            "An incline chest press using a seated bench & dumbbells.",
+          mainMuscle: "Chest",
+          secondaryMuscle: "Triceps",
+          category: "Weights",
+          equipment: "Dumbbells",
+        },
+      ],
+    },
+  ]);
 
   const addRoutine = (routine: Routine) => {
     setRoutines((prev) => {

@@ -3,28 +3,11 @@ import React, { useState } from "react";
 import SearchBar from "@/components/layout/SearchBar";
 import RoutineList from "@/components/routines/RoutineList";
 import { searchQuery } from "@/utils/strings";
+import { useRoutineContext } from "@/context/RoutineContext";
 
 export default function RoutineScreen() {
   const [search, setSearch] = useState<string>("");
-
-  const routines = [
-    {
-      id: 1,
-      name: "First routine",
-      exercises: [
-        {
-          id: 1,
-          name: "Incline Chest Press",
-          description:
-            "An incline chest press using a seated bench & dumbbells.",
-          mainMuscle: "Chest",
-          secondaryMuscle: "Triceps",
-          category: "Weights",
-          equipment: "Dumbbells",
-        },
-      ],
-    },
-  ];
+  const { routines } = useRoutineContext();
 
   return (
     <View>
