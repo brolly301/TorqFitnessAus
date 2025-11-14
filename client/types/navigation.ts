@@ -14,3 +14,17 @@ export type Workout = {
   date: string;
   exercises: Exercise[];
 };
+
+export type Routine = {
+  id: string;
+  name: string;
+  date: string;
+  exercises: Exercise[];
+};
+
+export type User = {
+  id: string;
+  firstName: string;
+  surname: string;
+  email: string;
+};

@@ -1,13 +1,13 @@
 import { Exercise } from "@/types/navigation";
 import { createContext, ReactNode, useContext, useState } from "react";
 
-type ExerciseType = {
+type ExerciseContextType = {
   exercises: Exercise[];
   addExercise: (exercise: Exercise) => void;
   deleteExercise: (id: string) => void;
 };
 
-const ExerciseContext = createContext<ExerciseType | null>(null);
+const ExerciseContext = createContext<ExerciseContextType | null>(null);
 
 export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
   const [exercises, setExercises] = useState<Exercise[]>([
