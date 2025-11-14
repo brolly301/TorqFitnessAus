@@ -9,10 +9,22 @@ export default function ExercisesScreen() {
   const [search, setSearch] = useState<string>("");
   const { exercises } = useExerciseContext();
 
+  const sortAZ = [...exercises].sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+
+  const sortZA = [...exercises].sort((a, b) => {
+    return b.name.localeCompare(a.name);
+  });
+
+  const groupMainMuscle = [...exercises].sort((a, b) => {
+    return a.mainMuscle.localeCompare(b.mainMuscle);
+  });
+
   return (
     <View>
       <SearchBar search={search} setSearch={setSearch} />
-      <ExerciseList exercises={searchQuery(search, exercises)} />
+      <ExerciseList exercises={groupMainMuscle} />
     </View>
   );
 }
