@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import SearchBar from "@/components/layout/SearchBar";
+import SearchBar from "@/components/ui/SearchBar";
 import RoutineList from "@/components/routines/RoutineList";
 import { searchQuery } from "@/utils/strings";
 import { useRoutineContext } from "@/context/RoutineContext";

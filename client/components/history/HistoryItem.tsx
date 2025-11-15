@@ -9,7 +9,7 @@ type Props = {
 export default function HistoryItem({ workout }: Props) {
   return (
     <View>
-      <Text>HistoryItem</Text>
+      <Text>{workout.name}</Text>
     </View>
   );
 }

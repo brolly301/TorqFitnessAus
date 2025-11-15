@@ -6,7 +6,6 @@ export type Exercise = {
   secondaryMuscle: string;
   category: string;
   equipment: string;
-  sets: ExerciseSets[];
 };
 
 export type ExerciseSets = {
@@ -16,18 +15,22 @@ export type ExerciseSets = {
   weight: number;
 };
 
+export type WorkoutExercise = Exercise & {
+  sets: ExerciseSets[];
+};
+
 export type Workout = {
   id: string;
   name: string;
   date: string;
-  exercises: Exercise[];
+  exercises: WorkoutExercise[];
 };
 
 export type Routine = {
   id: string;
   name: string;
   date: string;
-  exercises: Exercise[];
+  exercises: WorkoutExercise[];
 };
 
 export type User = {

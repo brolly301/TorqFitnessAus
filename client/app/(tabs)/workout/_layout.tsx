@@ -12,7 +12,7 @@ export default function _layout() {
           title: "Workout",
           headerRight: () => (
             <AntDesign
-              onPress={() => router.navigate("/workout/createWorkout")}
+              onPress={() => router.navigate("/workout/addWorkout")}
               name="plus"
               color={"black"}
               size={20}
@@ -20,7 +20,7 @@ export default function _layout() {
           ),
         }}
       />
-      <Stack.Screen name="createWorkout" options={{ title: "Workout" }} />
+      <Stack.Screen name="addWorkout" options={{ title: "Workout" }} />
     </Stack>
   );
 }

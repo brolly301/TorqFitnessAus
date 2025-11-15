@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import React from "react";
 import ExerciseItem from "./ExerciseItem";
 import { Exercise } from "@/types/navigation";
@@ -12,8 +12,8 @@ export default function ExerciseList({ exercises }: Props) {
     <View>
       {exercises.map((exercise) => {
         return (
-          <Pressable>
-            <ExerciseItem exercise={exercise} key={exercise.id} />
+          <Pressable key={exercise.id}>
+            <ExerciseItem exercise={exercise} />
           </Pressable>
         );
       })}

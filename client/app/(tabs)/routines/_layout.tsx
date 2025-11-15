@@ -13,7 +13,7 @@ export default function _layout() {
           headerRight: () => (
             <AntDesign
               onPress={() => {
-                router.navigate("/routines/createRoutine");
+                router.navigate("/routines/addRoutine");
               }}
               name="plus"
               color={"black"}
@@ -22,7 +22,7 @@ export default function _layout() {
           ),
         }}
       />
-      <Stack.Screen name="createRoutine" options={{ title: "Routines" }} />
+      <Stack.Screen name="addRoutine" options={{ title: "Routines" }} />
     </Stack>
   );
 }

@@ -10,9 +10,6 @@ export default function _layout() {
         name="index"
         options={{
           title: "Exercises",
-          headerRight: () => (
-            <AntDesign name="plus" color={"black"} size={18} />
-          ),
         }}
       />
     </Stack>

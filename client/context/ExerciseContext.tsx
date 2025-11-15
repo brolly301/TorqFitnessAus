@@ -19,14 +19,6 @@ export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
       secondaryMuscle: "Triceps",
       category: "Weights",
       equipment: "Dumbbells",
-      sets: [
-        {
-          id: "1",
-          set: 1,
-          reps: 8,
-          weight: 40,
-        },
-      ],
     },
     {
       id: "2",
@@ -36,14 +28,6 @@ export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
       secondaryMuscle: "Triceps",
       category: "Weights",
       equipment: "Dumbbells",
-      sets: [
-        {
-          id: "1",
-          set: 1,
-          reps: 8,
-          weight: 40,
-        },
-      ],
     },
     {
       id: "3",
@@ -53,14 +37,6 @@ export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
       secondaryMuscle: "Triceps",
       category: "Weights",
       equipment: "Dumbbells",
-      sets: [
-        {
-          id: "1",
-          set: 1,
-          reps: 8,
-          weight: 40,
-        },
-      ],
     },
     {
       id: "4",
@@ -70,14 +46,6 @@ export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
       secondaryMuscle: "Triceps",
       category: "Weights",
       equipment: "Dumbbells",
-      sets: [
-        {
-          id: "1",
-          set: 1,
-          reps: 8,
-          weight: 40,
-        },
-      ],
     },
     {
       id: "5",
@@ -87,14 +55,6 @@ export const ExerciseProvider = ({ children }: { children: ReactNode }) => {
       secondaryMuscle: "Triceps",
       category: "Weights",
       equipment: "Dumbbells",
-      sets: [
-        {
-          id: "1",
-          set: 1,
-          reps: 8,
-          weight: 40,
-        },
-      ],
     },
   ]);
 
