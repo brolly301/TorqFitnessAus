@@ -10,10 +10,10 @@ export type Props = {
 export default function ExerciseList({ exercises }: Props) {
   return (
     <View>
-      {exercises.map((item) => {
+      {exercises.map((exercise) => {
         return (
           <Pressable>
-            <ExerciseItem item={item} key={item.id} />
+            <ExerciseItem exercise={exercise} key={exercise.id} />
           </Pressable>
         );
       })}

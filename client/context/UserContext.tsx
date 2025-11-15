@@ -9,10 +9,10 @@ const UserContext = createContext<UserContextType | null>(null);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User>({
-    id: "",
-    firstName: "",
-    surname: "",
-    email: "",
+    id: "1",
+    firstName: "Marc",
+    surname: "Brolly",
+    email: "marcrobertjohn@gmail.com",
   });
 
   return (

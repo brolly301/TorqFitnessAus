@@ -14,7 +14,7 @@ export const RoutineProvider = ({ children }: { children: ReactNode }) => {
     {
       id: "1",
       name: "First routine",
-      date: "today",
+      date: Date.now().toString(),
       exercises: [
         {
           id: "1",
@@ -25,6 +25,14 @@ export const RoutineProvider = ({ children }: { children: ReactNode }) => {
           secondaryMuscle: "Triceps",
           category: "Weights",
           equipment: "Dumbbells",
+          sets: [
+            {
+              id: "1",
+              set: 1,
+              reps: 8,
+              weight: 40,
+            },
+          ],
         },
       ],
     },

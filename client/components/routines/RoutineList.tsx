@@ -1,13 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Exercise } from "../exercises/ExerciseList";
 import RoutineItem from "./RoutineItem";
-
-export type Routine = {
-  id: number;
-  name: string;
-  exercises: Exercise[];
-};
+import { Routine } from "@/types/navigation";
 
 type Props = {
   routines: Routine[];

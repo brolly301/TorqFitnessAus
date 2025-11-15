@@ -6,6 +6,14 @@ export type Exercise = {
   secondaryMuscle: string;
   category: string;
   equipment: string;
+  sets: ExerciseSets[];
+};
+
+export type ExerciseSets = {
+  id: string;
+  set: number;
+  reps: number;
+  weight: number;
 };
 
 export type Workout = {

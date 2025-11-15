@@ -3,18 +3,18 @@ import React from "react";
 import { Exercise } from "@/types/navigation";
 
 type Props = {
-  item: Exercise;
+  exercise: Exercise;
 };
 
-export default function ExerciseItem({ item }: Props) {
+export default function ExerciseItem({ exercise }: Props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.name}>{item.name}</Text>
-      <Text style={styles.description}>{item.description}</Text>
-      <Text style={styles.mainMuscle}>{item.mainMuscle}</Text>
-      <Text style={styles.secondaryMuscle}>{item.secondaryMuscle}</Text>
-      <Text style={styles.category}>{item.category}</Text>
-      <Text style={styles.equipment}>{item.equipment}</Text>
+      <Text style={styles.name}>{exercise.name}</Text>
+      <Text style={styles.description}>{exercise.description}</Text>
+      <Text style={styles.mainMuscle}>{exercise.mainMuscle}</Text>
+      <Text style={styles.secondaryMuscle}>{exercise.secondaryMuscle}</Text>
+      <Text style={styles.category}>{exercise.category}</Text>
+      <Text style={styles.equipment}>{exercise.equipment}</Text>
     </View>
   );
 }
